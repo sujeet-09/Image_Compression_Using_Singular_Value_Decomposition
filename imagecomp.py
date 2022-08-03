@@ -55,7 +55,7 @@ mr = imageHeight
 mc = imageWidth
 
 originalSize = mr * mc * 3
-compressedSize = singularValuesLimit *(mc+mr-singularValuesLimit)* 3
+compressedSize = singularValuesLimit *(1+mc+mr)* 3
 
 print('original size:')
 print(originalSize,'  Bytes')
@@ -68,4 +68,3 @@ ratio = compressedSize * 1.0 / originalSize
 print(ratio)
 
 print('Compressed image size is ' + str(round(ratio * 100, 2)) + '% of the original image ')
-print('DONE - Compressed the image!')
